@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public name: string = 'Lukasz'
+  public name: string = 'Adam'
+  public btnLabel: string = 'Click me!'
+  public userInput: string = ''
+  public isNameVisible: boolean = false
+
+  public onInputLog(): void {
+    if (this.userInput.trim().length > 2) {
+      console.log(this.userInput);
+      this.isNameVisible = true
+    } else {
+      alert('invalid input!')
+    }
+  }
+
+  public onClick() {
+    console.log('I was clicked')
+  }
+
+  public onParagraphClick() {
+    console.log('Paragraph was click');
+  }
+
+  public getName() {
+
+    return 'Lukasz'
+  }
 }

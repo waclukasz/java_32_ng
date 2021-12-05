@@ -1,3 +1,6 @@
 <main-header></main-header>
 
-<p>Hello! {{ name }}</p>
+<input type="text" [(ngModel)]="userInput">
+<button (click)="onInputLog()">Log Input</button>
+
+<p *ngIf="isNameVisible">Hello! {{ userInput }}</p>
