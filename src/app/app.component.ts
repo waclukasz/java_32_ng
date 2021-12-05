@@ -6,30 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public name: string = 'Adam'
-  public btnLabel: string = 'Click me!'
-  public userInput: string = ''
-  public isNameVisible: boolean = false
+  public name: string = ''
+  public surname: string = ''
 
-  public onInputLog(): void {
-    if (this.userInput.trim().length > 2) {
-      console.log(this.userInput);
-      this.isNameVisible = true
-    } else {
-      alert('invalid input!')
-    }
-  }
+  public users: Array<any> = []
 
-  public onClick() {
-    console.log('I was clicked')
-  }
+  public saveUser() {
+    this.users.push({
+      name: this.name,
+      surname: this.surname,
+      id: Date.now()
+    })
 
-  public onParagraphClick() {
-    console.log('Paragraph was click');
-  }
+    this.name = ''
+    this.surname = ''
+    console.log(this.users);
 
-  public getName() {
-
-    return 'Lukasz'
   }
 }

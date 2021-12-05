@@ -1,6 +1,17 @@
-<main-header></main-header>
+<label for="">
+  Name:
+  <input type="text" [(ngModel)]="name">
+</label>
+<br>
+<br>
+<label for="">
+  Surname:
+  <input type="text" [(ngModel)]="surname">
+</label>
+<br>
+<br>
 
-<input type="text" [(ngModel)]="userInput">
-<button (click)="onInputLog()">Log Input</button>
+<button (click)="saveUser()" >Save User</button>
 
-<p *ngIf="isNameVisible">Hello! {{ userInput }}</p>
+<p>Lukasz</p>
+<p>Wac</p>
